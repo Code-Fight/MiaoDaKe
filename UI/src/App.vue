@@ -1,33 +1,36 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <el-button @click.native="startHacking">Let's do it</el-button>
+  <!-- Navbar -->
+  <div id='wrapper'>
+    <!-- Sidebar -->
+    <section id='sidebar'>
+      <com-menu></com-menu>
+    </section>
+    <!-- Tools -->
+    <section id="tools" style="-webkit-app-region:drag">
+      <com-header></com-header>
+    </section>
+    <!-- Content -->
+    <div id='content'>
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </div>
   </div>
+
 </template>
 
+
 <script>
-export default {
-  data () {
-    return {
-      msg: 'Use Vue 2.0 Today!'
-    }
-  },
+import Header from './assets/componets/header.vue';
+import Menu from './assets/componets/menu.vue';
+import Index from './assets/pages/index.vue';
 
-  methods: {
-    startHacking () {
-      this.$notify({
-        title: 'It Works',
-        message: 'We have laid the groundwork for you. Now it\'s your time to build something epic!',
-        duration: 6000
-      })
+export default{
+        components:{
+            comHeader:Header,
+            comMenu:Menu,
+            comIndex:Index
+        }
+
     }
-  }
-}
 </script>
-
-<style>
-body {
-  font-family: Helvetica, sans-serif;
-}
-</style>

@@ -21,6 +21,9 @@
     "style-loader": "^0.13.1",
     "vue-loader": "^9.8.0",
     "webpack": "2.1.0-beta.22",
-    "webpack-dev-server": "^2.1.0-beta.0"
-  }
+    "webpack-dev-server": "2.1.0-beta.0"
+  },
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "license": "ISC"
 }

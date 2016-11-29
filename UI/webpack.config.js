@@ -43,7 +43,17 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  resolve: {
+    extensions: ['', '.js', '.vue'],
+    /**
+     * Vue v2.x 之後 NPM Package 預設只會匯出 runtime-only 版本，若要使用 standalone 功能則需下列設定
+     */
+    alias: {
+      vue: 'vue/dist/vue.js',
+      vueRouter: 'vue-router/dist/vue-router.js'
+    }
+  }
 }
 
 if (process.env.NODE_ENV === 'production') {
