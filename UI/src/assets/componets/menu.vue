@@ -4,12 +4,12 @@
     <ul id='dock'>
       <li class='active launcher'>
         <i class="fa fa-desktop"></i>
-        <router-link to="/index" >首页</router-link>
+        <router-link to="/index">首页</router-link>
         <!--<a href="#">首页1</a>-->
       </li>
       <li class='launcher'>
         <i class="fa  fa-cloud"></i>
-        <a href="#">云产品库</a>
+        <router-link to="/could">云产品库</router-link>
       </li>
       <li class='launcher'>
         <i class="fa  fa-shopping-cart"></i>
@@ -40,6 +40,24 @@
   </div>
 </template>
 <script>
+// require("./javascripts/jquery.js")
+// jQuery(function(){ 
+//      $("#dock>li").each(function(index,ele){$(ele).on("click",menuclick)});
+// })
+// var menuclick= function (obj)
+// {
+//     $("#dock>li").each(function(index,ele){$(ele).attr('class','launcher')});
+//     $(this).attr('class','active launcher')
+// }
+
+  var _lis=document.getElementsByTagName("li");
+  console.log(document.getElementsByTagName("li").length)
+  for(var x in _lis)
+  {
+    
+    //console.log(_lis)
+    //  _lis[x].className="launcher";
+  }
 
  export default{
     data:function()
