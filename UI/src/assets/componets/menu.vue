@@ -10,14 +10,10 @@
       <li class='launcher'>
         <i class="fa  fa-cloud"></i>
         <router-link to="/could">云产品库</router-link>
-      </li>
-      <li class='launcher'>
-        <i class="fa  fa-shopping-cart"></i>
-        <a href="#">导购系统</a>
-      </li>
+      </li>      
       <li class='launcher'>
         <i class="fa fa-retweet"></i>
-        <a href="#">消息转换</a>
+        <router-link to="/transfer">消息转换</router-link>
       </li>
       <li class='launcher'>
         <i class="fa fa-comments"></i>

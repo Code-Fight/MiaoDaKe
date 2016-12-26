@@ -7,6 +7,7 @@ import './assets/stylesheets/application-a07755f5.css'
 import './assets/font-awesome/css/font-awesome.min.css'
 import Index from './assets/pages/index.vue'
 import Could from './assets/pages/could.vue'
+import Transfer from './assets/pages/transfer.vue'
 
 Vue.use(ElementUI)
 Vue.use(VueRouter);
@@ -18,7 +19,7 @@ const routes = [
 
             { path: 'could', name:'could', component: Could },
 
-            { path: 'page2/:id', name:'page2', component: Index }
+            { path: 'transfer', name:'transfer', component: Transfer }
         ]
     }
 ];
