@@ -8,7 +8,8 @@ import './assets/font-awesome/css/font-awesome.min.css'
 import Index from './assets/pages/index.vue'
 import Could from './assets/pages/could.vue'
 import Transfer from './assets/pages/transfer.vue'
-
+import Monitor from './assets/pages/monitor.vue'
+import Send from './assets/pages/send.vue'
 Vue.use(ElementUI)
 Vue.use(VueRouter);
 const routes = [
@@ -19,7 +20,10 @@ const routes = [
 
             { path: 'could', name:'could', component: Could },
 
-            { path: 'transfer', name:'transfer', component: Transfer }
+            { path: 'transfer', name:'transfer', component: Transfer },
+            { path: 'monitor', name:'monitor', component: Monitor },
+            { path: 'send', name:'send', component: Send }
+            
         ]
     }
 ];

@@ -10,15 +10,22 @@
       <li class='launcher'>
         <i class="fa  fa-cloud"></i>
         <router-link to="/could">云产品库</router-link>
-      </li>      
+      </li>
       <li class='launcher'>
         <i class="fa fa-retweet"></i>
         <router-link to="/transfer">消息转换</router-link>
       </li>
+
       <li class='launcher'>
         <i class="fa fa-comments"></i>
-        <a href="#">群消息监控</a>
+        <router-link to="/monitor">群消息监控</router-link>
       </li>
+
+      <li class='launcher'>
+        <i class="fa fa-comments"></i>
+        <router-link to="/send">群消息监控</router-link>
+      </li>
+
       <li class='launcher'>
         <i class="fa fa-cubes"></i>
         <a href="#">实用工具</a>
@@ -36,31 +43,29 @@
   </div>
 </template>
 <script>
-// require("./javascripts/jquery.js")
-// jQuery(function(){ 
-//      $("#dock>li").each(function(index,ele){$(ele).on("click",menuclick)});
-// })
-// var menuclick= function (obj)
-// {
-//     $("#dock>li").each(function(index,ele){$(ele).attr('class','launcher')});
-//     $(this).attr('class','active launcher')
-// }
+  // require("./javascripts/jquery.js")
+  // jQuery(function(){ 
+  //      $("#dock>li").each(function(index,ele){$(ele).on("click",menuclick)});
+  // })
+  // var menuclick= function (obj)
+  // {
+  //     $("#dock>li").each(function(index,ele){$(ele).attr('class','launcher')});
+  //     $(this).attr('class','active launcher')
+  // }
 
-  var _lis=document.getElementsByTagName("li");
+  var _lis = document.getElementsByTagName("li");
   console.log(document.getElementsByTagName("li").length)
-  for(var x in _lis)
-  {
-    
+  for (var x in _lis) {
+
     //console.log(_lis)
     //  _lis[x].className="launcher";
   }
 
- export default{
-    data:function()
-    {
-        return{
-          img_per:require('../images/person.png')
-        }
+  export default {
+    data: function () {
+      return {
+        img_per: require('../images/person.png')
+      }
     }
   }
 </script>
