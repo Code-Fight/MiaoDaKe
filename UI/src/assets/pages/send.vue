@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap" id="wrap">
+    <div  class="wrap" id="wrap">
     <ul class="tabClick">
         <li class="active">待发消息</li>
         <li>群发设置</li>
@@ -36,7 +36,18 @@
     .lineDiv{ background: #07a6f5; height: 2px; width: 25%;}
 </style>
 <script charset="utf-8">
-	window.onload = function (){
+ export default {
+    data: function () {
+      return {
+        img_per: require('../images/person.png')
+      }
+    },
+    mounted:function()
+    {
+        _init();
+    }
+  }
+	var _init = function (){
         var windowWidth = document.body.clientWidth-79-40; //window 宽度;
 		var wrap = document.getElementById('wrap');
         var tabClick = wrap.querySelectorAll('.tabClick')[0];
@@ -166,5 +177,5 @@
             obj.style.transition='all '+time+'s ease-in-out';
         },
     }
-    
+    //document.getElementById("wrap").onload=_init;
 </script>
