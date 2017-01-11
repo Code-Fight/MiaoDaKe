@@ -16,10 +16,7 @@
         <router-link to="/transfer">消息转换</router-link>
       </li>
 
-      <li class='launcher' @click="menuclick">
-        <i class="fa fa-comments"></i>
-        <router-link to="/monitor">群消息监控</router-link>
-      </li>
+    
 
       <li class='launcher' @click="menuclick">
         <i class="fa fa-comments"></i>
@@ -30,15 +27,13 @@
         <i class="fa fa-cubes"></i>
         <a href="#">实用工具</a>
       </li>
-      <li class='launcher' @click="menuclick">
-        <i class="fa fa-building-o"></i>
-        <a href="#">订单查询</a>
-      </li>
+     
 
 
     </ul>
     <div id='beaker'>
-      <img :src="img_per" />
+       <router-link to="/person"><img :src="img_per" /></router-link>
+      
     </div>
   </div>
 </template>

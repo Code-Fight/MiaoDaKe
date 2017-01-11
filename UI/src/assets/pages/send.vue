@@ -38,7 +38,7 @@
                 <div class="panel-body">
                     <el-row :span="24">
                         <el-col :span="12">
-                            <label style="height: 100%;vertical-align: top;margin-top: 10px;">消息发送模式</label>
+                            <label style="height: 100%;vertical-align: top;margin-top: 10px;">消息发送模式：</label>
 <el-radio-group v-model="msg_send_mode">
     <el-radio-button label="普通模式"></el-radio-button>
     <el-radio-button label="智能二合一模式"></el-radio-button>
@@ -46,24 +46,51 @@
 </el-radio-group>
 
 
-</el-form>
+
 
 
 </el-col>
 <el-col :span="12">
-    <label style="height: 100%;vertical-align: top;margin-top: 10px;">消息发送对象</label>
+    <label style="height: 100%;vertical-align: top;margin-top: 10px;">消息发送对象：</label>
 <div style="display: inline-block;margin-top: 10px" >
 <el-checkbox v-model="send_wechat">微信群</el-checkbox>
 <el-checkbox v-model="send_qq">QQ群</el-checkbox>
 </div>
 
+<el-button type="primary" style="margin-left: 80px">开始群发</el-button>
 
 
-</el-form>
 
 
 </el-col>
 
+</el-row>
+
+
+
+
+<el-row :span="24">
+
+    <el-col :span="12">
+
+        <div style="float: left;margin-top: 10px;margin-left: 105px" >
+<el-checkbox v-model="send_wechat">缩短优惠券链接</el-checkbox>
+</div>
+</el-col>
+<el-col :span="12">
+    <label style="height: 100%;vertical-align: top;margin-top: 10px;">发送间隔设置：</label>
+<div style="display: inline-block;" >
+<el-input placeholder="" v-model="input3" style="width: 100px;float: left;margin-left: 10px">
+<template slot="prepend">QQ</template>
+</el-input>
+<el-input placeholder="" v-model="input3" style="width: 100px;float: right;margin-left: 10px">
+<template slot="prepend">微信</template>
+</el-input>
+
+</div>
+
+
+</el-col>
 </el-row>
 </div>
 </div>
@@ -109,18 +136,39 @@
                 <div class="panel-heading">监控设置</div>
                 <div class="panel-body">
 
-                </div>
-            </div>
-        </el-col>
-    </el-row>
+                    <el-row :span="24">
 
-    <el-row :gutter=20>
-        <el-col :span="12">
-            <el-row>
-                <el-col :span="24">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">监控群列表</div>
-                        <div class="panel-body" style="padding:0px;height:350px">
+
+
+                        <el-col :span="24">
+
+                            <div style="display: inline-block;margin-top: 10px" >
+<el-checkbox v-model="send_wechat">监控群消息</el-checkbox>
+<el-checkbox v-model="send_qq">过滤无券消息</el-checkbox>
+</div>
+<label style="height: 100%;vertical-align: top;margin-top: 10px;margin-left: 20px">缓存消息：</label>
+
+<label style="height: 100%;vertical-align: top;margin-top: 10px;"> 条</label>
+<label style="height: 100%;vertical-align: top;margin-top: 10px;color: #07A6F5;margin-left:5px;cursor: pointer">立即清空缓存</label>
+<label style="height: 100%;vertical-align: top;margin-top: 10px;color: #07A6F5;margin-left:5px;cursor: pointer">下载酷Q机器人</label>
+
+
+
+</el-col>
+
+</el-row>
+</div>
+</div>
+</el-col>
+</el-row>
+
+<el-row :gutter=20>
+    <el-col :span="12">
+        <el-row>
+            <el-col :span="24">
+                <div class="panel panel-default">
+                    <div class="panel-heading">监控群列表</div>
+                    <div class="panel-body" style="padding:0px;height:350px">
 <el-table border style="width: 100%;border:none">
 <el-table-column align="left" prop="txt" label="QQ群"></el-table-column>
 </el-table>
@@ -147,7 +195,7 @@
 
 </div>
 <div class="tabList">
-    4</div>
+</div>
 </div>
 </div>
 </div>

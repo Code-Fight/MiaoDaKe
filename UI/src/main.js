@@ -10,6 +10,7 @@ import Could from './assets/pages/could.vue'
 import Transfer from './assets/pages/transfer.vue'
 import Monitor from './assets/pages/monitor.vue'
 import Send from './assets/pages/send.vue'
+import Person from './assets/pages/person.vue'
 Vue.use(ElementUI)
 Vue.use(VueRouter);
 const routes = [
@@ -22,7 +23,8 @@ const routes = [
 
             { path: 'transfer', name:'transfer', component: Transfer },
             { path: 'monitor', name:'monitor', component: Monitor },
-            { path: 'send', name:'send', component: Send }
+            { path: 'send', name:'send', component: Send },
+            { path: 'person', name:'person', component: Person }
             
         ]
     }

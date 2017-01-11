@@ -7,7 +7,7 @@
         <div id="toolbar" class="__web-inspector-hide-shortcut__">
             <ul id="dock-top">
                 <li class='launcher'>
-                    <i class="fa fa-cog"></i>
+                     <router-link to="/person"><i class="fa fa-cog"></i></router-link>
                 </li>
                 <li class='launcher'>
                     <i class="fa fa-minus"></i>
