@@ -11,6 +11,7 @@ import Transfer from './assets/pages/transfer.vue'
 import Monitor from './assets/pages/monitor.vue'
 import Send from './assets/pages/send.vue'
 import Person from './assets/pages/person.vue'
+import Tools from './assets/pages/tools.vue'
 Vue.use(ElementUI)
 Vue.use(VueRouter);
 const routes = [
@@ -18,13 +19,12 @@ const routes = [
         children: [
 
             { path: 'index', name:'index', component: Index },
-
             { path: 'could', name:'could', component: Could },
-
             { path: 'transfer', name:'transfer', component: Transfer },
             { path: 'monitor', name:'monitor', component: Monitor },
             { path: 'send', name:'send', component: Send },
-            { path: 'person', name:'person', component: Person }
+            { path: 'person', name:'person', component: Person },
+            { path: 'tools', name:'tools', component: Tools }
             
         ]
     }

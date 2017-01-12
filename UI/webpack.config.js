@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: '/dist/',//编译的时候改为【dist/】
     filename: 'build.js'
   },
   resolveLoader: {

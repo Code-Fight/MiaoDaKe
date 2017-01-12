@@ -25,7 +25,7 @@
 
       <li class='launcher' @click="menuclick">
         <i class="fa fa-cubes"></i>
-        <a href="#">实用工具</a>
+        <router-link to="/tools">实用工具</router-link>
       </li>
      
 
